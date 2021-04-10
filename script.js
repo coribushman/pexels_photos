@@ -17,7 +17,7 @@ document.getElementById("topicSubmit").addEventListener("click", function(event)
       }).then(function(json) {
 
         let results = "";
-        for (i = 0; i<json.per_page; i++) {
+        for (i = 0; i<json.photos.length; i++) {
           results += "<img src="+ json.photos[i].src.small +"/>";
         }
 
@@ -45,7 +45,7 @@ document.getElementById("topicSubmit").addEventListener("click", function(event)
         }).then(function(json) {
 
           let results = "";
-          for (i = 0; i<json.per_page; i++) {
+          for (i = 0; i<json.photos.length; i++) {
             results += "<img src="+ json.photos[i].src.small +"/>";
           }
 
@@ -68,7 +68,7 @@ const url = "https://api.pexels.com/v1/curated?page=" + Math.random() * (500 - 1
     }).then(function(json) {
 
       let results = "";
-      for (i = 0; i<json.per_page; i++) {
+      for (i = 0; i<json.photos.length; i++) {
         results += "<img src="+ json.photos[i].src.small +"/>";
       }
 
