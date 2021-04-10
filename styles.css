@@ -17,10 +17,12 @@
    flex-direction: row;
    position: relative;
    height: 100vh;
+
  }
 
  .top {
    background-color: #f5f1ed;
+   width: 100vw;
  }
 
  .content {
