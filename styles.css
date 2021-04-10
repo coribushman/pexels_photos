@@ -4,19 +4,49 @@
    box-sizing: border-box;
    font-family: Goudy Bookletter 1911, sans-serif;
    font-variant: small-caps;
+   font-size: 17px;
+ }
+
+ #topicInput, #colorInput {
+   font-variant: normal;
+ }
+
+ .page {
+   position: relative;
+   min-height: 100vh;
+ }
+
+ .top {
+   background-color: #f5f1ed;
+ }
+
+ .content {
+   padding-bottom: 2.5rem;
+ }
+
+ #results {
+   display: flex;
+   justify-content: space-around;
+   padding: 10px;
+   flex-wrap: wrap;
+ }
+
+ img {
+   padding: 10px;
+   height: 300px;
  }
 
 h1 {
   display: flex;
   justify-content: center;
   padding: 20px;
+  font-size: 30px;
 }
 
  .search {
    display: flex;
    flex-direction: row;
    justify-content: center;
-   border: 3px solid red;
  }
 
  form {
@@ -32,8 +62,12 @@ h1 {
  .footer {
    display: flex;
    width: 100%;
-   padding: 15px;
+   position: relative;
+   justify-content: center;
+   align-items: center;
    position: absolute;
    bottom: 0;
-   justify-content: center;
+   width: 100%;
+   height: 2.5rem;
+   background-color: #f5f1ed;
  }

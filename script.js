@@ -18,7 +18,7 @@ document.getElementById("topicSubmit").addEventListener("click", function(event)
 
         let results = "";
         for (i = 0; i<json.per_page; i++) {
-          results += "<img src="+ json.photos[i].src.tiny +"/>";
+          results += "<img src="+ json.photos[i].src.small +"/>";
         }
 
         document.getElementById("results").innerHTML = results;
@@ -34,7 +34,7 @@ document.getElementById("topicSubmit").addEventListener("click", function(event)
       if (color === "")
         return;
 
-    const url = "https://api.pexels.com/v1/search?query=popular&color=" + color;
+    const url = "https://api.pexels.com/v1/search?query=all&color=" + color;
       fetch(url, {
         headers: {
           Authorization: APIkey
@@ -46,12 +46,11 @@ document.getElementById("topicSubmit").addEventListener("click", function(event)
 
           let results = "";
           for (i = 0; i<json.per_page; i++) {
-            results += "<img src="+ json.photos[i].src.tiny +"/>";
+            results += "<img src="+ json.photos[i].src.small +"/>";
           }
 
           document.getElementById("results").innerHTML = results;
 
-          //ADD MORE FORMATING TO DISPLAY MORE WEATHER INFO
         });
 });
 //------------------------------------------------------------------------------------
@@ -70,7 +69,7 @@ const url = "https://api.pexels.com/v1/curated?page=" + Math.random() * (500 - 1
 
       let results = "";
       for (i = 0; i<json.per_page; i++) {
-        results += "<img src="+ json.photos[i].src.tiny +"/>";
+        results += "<img src="+ json.photos[i].src.small +"/>";
       }
 
       document.getElementById("results").innerHTML = results;
